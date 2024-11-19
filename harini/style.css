@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200..1000&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+html {
+    font-size: 70%;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: #e699c7;
+    color: #eecbcb;
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+header {
+    position: fixed;
+    padding: 2rem 9%;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+}
+
+.logo {
+    color: hsl(350, 94%, 14%);
+    font-size: 2.5rem;
+    font-weight: 700;
+    cursor: default;
+}
+
+.navbar a {
+    color: hsl(350, 94%, 14%);
+    position: relative;
+    margin-left: 4rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover,
+.navbar a:active {
+    color: hsl(350, 94%, 14%);
+    border-bottom: 3px solid rgb(51, 7, 18);
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(219, 33, 33);
+}
+
+.home-content h3 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: rgb(224, 18, 166);
+}
+
+.home-content h3:nth-of-type(2) {
+    margin-bottom: 2rem;
+}
+
+span {
+    color: hsl(350, 94%, 14%);
+    animation: alternate-reverse;
+}
+
+.home-content h1 {
+    font-size: 5.6rem;
+    color: hsl(350, 94%, 14%);
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.home-img img {
+    width: 25vw;
+    animation: floatImage 4s ease-in-out infinite;
+}
+
+@keyframes floatImage {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-2.4rem);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.home-content p {
+    font-size: 1.6rem;
+    padding-right: 2rem;
+    color:hsl(350, 94%, 14%);
+    font-weight: 700;
+}
+
+.social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: 0.2rem solid rgb(228, 216, 216);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: hsl(350, 94%, 14%);;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: background 0.5s ease, color 0.5s ease, box-shadow 0.5s ease;
+}
+
+.social-media a:hover {
+    background: rgb(141, 18, 59);
+    color: rgb(22, 184, 184);
+    box-shadow: 0 0 1rem rgb(232, 223, 223);
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: rgb(204, 160, 183);
+    border: 0.2rem solid rgb(219, 209, 209);
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: hsl(350, 94%, 14%);;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    transition: background 0.5s ease, box-shadow 0.5s ease;
+}
+
+.btn:hover {
+    background: rgb(252, 252, 252);
+    box-shadow: none;
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background:#f18ac8;
+}
+
+.heading {
+    text-align: center;
+    font-size: 4.5rem;
+    color: hsl(350, 94%, 14%);
+}
+
+.about-content h2 {
+    text-align: left;
+    line-height: 1.2;
+    colour: rgb(224, 18, 166);
+}
+
+.about-content h3 {
+    font-size: 2.6rem;
+    color: rgb(224, 18, 166);
+}
+
+.about-content p {
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+    color:hsl(350, 94%, 14%);
+}
+
+@media (max-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 991px) {
+    header {
+        padding: 2rem 3%;
+    }
+    section {
+        padding: 10rem 3%;
+    }
+}
+
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column;
+    }
+    .home-content {
+        order: 2;
+    }
+    .home-content h3 {
+        font-size: 2.6rem;
+    }
+    .home-content h1 {
+        font-size: 5rem;
+    }
+    .home-img img {
+        width: 70vw;
+        margin-top: 4rem;
+    }
+    .about {
+        flex-direction: column;
+    }
+    .about-img img {
+        width: 90vw;
+        margin-top: 4rem;
+    }
+}
+
+@media (max-width: 617px) {
+    .home-img img,
+    .about-img img {
+        width: 80vw;
+        margin-top: 4rem;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+    .home-img img,
+    .about-img img {
+        width: 70vw;
+        margin-top: 4rem;
+    }
+}
+
+.typing-text {
+    font-size: 3.4rem;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.typing-text span {
+    position: relative;
+}
+
+.typing-text span::before {
+    content: "FRONTEND DEVELOPER";
+    color: #eee2ea;
+    animation: words 20s infinite;
+}
+
+.typing-text span::after {
+    content: "";
+    background-color: transparent;
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid transparent;
+    right: -8px;
+    animation: cursor 0.6s infinite;
+}
+
+@keyframes cursor {
+    to {
+        border-left: 3px solid transparent;
+    }
+}
+
+@keyframes words {
+    0%, 20% {
+        content: "FRONTEND DEVELOPER";
+    }
+    21%, 40% {
+        content: "AI ENTHUSIAST";
+    }
+    41%, 60% {
+        content: "UI/UX DEVELOPER";
+    }
+    81%, 100% {
+        content:"FULL STACK DEVELOPER" ;
+    }
+}
